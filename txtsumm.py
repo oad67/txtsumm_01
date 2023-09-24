@@ -54,9 +54,9 @@ if st.button("Summarize"):
 
     
     def get_sumvalues():
-    sumvalues=0
-    for sentence in sentencevalue:
-        sumvalues+=sentencevalue[sentence]
+        sumvalues=0
+        for sentence in sentencevalue:
+            sumvalues+=sentencevalue[sentence]
         
     average=int(sumvalues/len(sentencevalue))
     return(average)
