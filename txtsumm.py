@@ -19,7 +19,7 @@ text=st.text_area("Enter text to summarize:")
 #clicked=st.button("Summarize")
 ####
 
-st.divider()
+
 
 if st.button("Summarize"):
     import pandas as pd
@@ -73,5 +73,6 @@ if st.button("Summarize"):
             summary+=" "+sentence
 
 
+    st.write("---------------")
     
     st.write(summary)
