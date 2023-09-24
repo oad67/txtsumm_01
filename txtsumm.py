@@ -12,7 +12,7 @@ nltk.download("punkt")
 import joblib
 
 st.set_page_config(page_title="Text Summarizer_OA")
-st.write("Text Summarizer")
+st.header("OA's Text Summarizer")
 
 text=st.text_area("Enter text to summarize:")
 
