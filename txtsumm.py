@@ -42,13 +42,13 @@ if st.button("Summarize"):
     sentences=sent_tokenize(text)
 
     def get_sentencevalue():
-    sentencevalue=dict()
-    for sentence in sentences:
-        for word,freq in freqTable.items():
-            if word in sentence.lower():
-                if sentence in sentencevalue:
-                    sentencevalue[sentence]+=freq
-                else:sentencevalue[sentence]=freq
+        sentencevalue=dict()
+        for sentence in sentences:
+            for word,freq in freqTable.items():
+                if word in sentence.lower():
+                    if sentence in sentencevalue:
+                        sentencevalue[sentence]+=freq
+                    else:sentencevalue[sentence]=freq
     return sentencevalue
     sentencevalue=get_sentencevalue()
 
