@@ -70,4 +70,6 @@ if st.button("Summarize"):
         if(sentence in sentencevalue) and (sentencevalue[sentence]>(1.2*average)):
             summary+=" "+sentence
 
+
+    st.divider()
     st.write(summary)
