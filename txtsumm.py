@@ -40,17 +40,30 @@ if st.button("Summarize"):
         else: freqTable[word]=1
     
     sentences=sent_tokenize(text)
+
+    def get_sentencevalue():
+    sentencevalue=dict()
+    for sentence in sentences:
+        for word,freq in freqTable.items():
+            if word in sentence.lower():
+                if sentence in sentencevalue:
+                    sentencevalue[sentence]+=freq
+                else:sentencevalue[sentence]=freq
+    return sentencevalue
     sentencevalue=get_sentencevalue()
 
+    
     def get_sumvalues():
-        sumvalues=0
-        for sentence in sentencevalue:
-            sumvalues+=sentencevalue[sentence]
+    sumvalues=0
+    for sentence in sentencevalue:
+        sumvalues+=sentencevalue[sentence]
         
-        average=int(sumvalues/len(sentencevalue))
-        return(average)
+    average=int(sumvalues/len(sentencevalue))
+    return(average)
 
     average=get_sumvalues()
+
+    
 
     summary=''
     for sentence in sentences:
