@@ -49,7 +49,7 @@ if st.button("Summarize"):
                     if sentence in sentencevalue:
                         sentencevalue[sentence]+=freq
                     else:sentencevalue[sentence]=freq
-    return sentencevalue
+        return sentencevalue
     sentencevalue=get_sentencevalue()
 
     
