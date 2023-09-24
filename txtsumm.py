@@ -58,8 +58,8 @@ if st.button("Summarize"):
         for sentence in sentencevalue:
             sumvalues+=sentencevalue[sentence]
         
-    average=int(sumvalues/len(sentencevalue))
-    return(average)
+        average=int(sumvalues/len(sentencevalue))
+        return(average)
 
     average=get_sumvalues()
 
